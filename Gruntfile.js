@@ -26,9 +26,25 @@ module.exports = function (grunt) {
         'gitbook': {
             development: {
                 input: "./",
-                title: "TZ Martin Journal",
-                description: "This is my journal.",
-                github: "tzmartin/tzmartin.github.io"
+                title: "TZ Martin Dev Journal",
+                description: "This is my development journal.",
+                github: "tzmartin/tzmartin.github.io",
+                plugins: [
+                    "anchors",
+                    "customtheme",
+                    "mermaid",
+                    "js-sequence-diagram"
+                ],
+                pluginsConfig: {
+                    "customtheme": {
+                        "css": [
+                            "../_/css/app.css"
+                        ],
+                        "js": [
+                            "../_/js/app.js"
+                        ]
+                    }
+                }
             }
         },
         'gh-pages': {
