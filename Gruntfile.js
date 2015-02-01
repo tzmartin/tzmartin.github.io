@@ -1,5 +1,21 @@
 var path = require("path");
 
+/*
+
+Install GitBook on Github Pages..
+
+$ npm install .
+
+Testing:
+
+$ grunt test
+
+Publish on the gh-pages branch: 
+
+$ grunt publish
+
+*/
+
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-gitbook');
     grunt.loadNpmTasks('grunt-gh-pages');
