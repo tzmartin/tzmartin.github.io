@@ -1,4 +1,2 @@
-GitBook
-=======
+# Development
 
-README for section 1
