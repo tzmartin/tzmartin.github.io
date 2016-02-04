@@ -1,0 +1,820 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Optimization | TZM - Dev Journal</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-js-sequence-diagram/styles.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../section1/framerjs.html" />
+    
+    
+    <link rel="prev" href="../section1/protocol_buffers.html" />
+    
+
+        <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js'></script>
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.9"
+        data-chapter-title="Optimization"
+        data-filepath="section1/optimization.md"
+        data-basepath=".."
+        data-revision="Thu Feb 04 2016 15:16:03 GMT-0800 (PST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://tzmartin.github.io" target="blank" class="custom-link">Home</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="planning/index.html">
+            
+                
+                    <a href="../planning/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Planning
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="planning/personas.html">
+            
+                
+                    <a href="../planning/personas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Personas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="planning/experience_design.html">
+            
+                
+                    <a href="../planning/experience_design.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Experience Maps
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="planning/surveys.html">
+            
+                
+                    <a href="../planning/surveys.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Surveys
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="planning/presentations.html">
+            
+                
+                    <a href="../planning/presentations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Presentations
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="section2/index.html">
+            
+                
+                    <a href="../section2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Design
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="section2/example1.html">
+            
+                
+                    <a href="../section2/example1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Icons
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="section2/ux.html">
+            
+                
+                    <a href="../section2/ux.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        UX
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="section2/visual_design.html">
+            
+            <span><b>2.2.1.</b> Visual Design</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="section2/human_factors.html">
+            
+            <span><b>2.2.2.</b> Human Factors</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="section2/accessibility.html">
+            
+            <span><b>2.2.3.</b> Accessibility</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="section2/marketing.html">
+            
+            <span><b>2.2.4.</b> Marketing</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="section2/utility.html">
+            
+            <span><b>2.2.5.</b> Utility</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="section2/ergonomics.html">
+            
+            <span><b>2.2.6.</b> Ergonomics</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="section2/system_performance.html">
+            
+            <span><b>2.2.7.</b> System Performance</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="section2/usability.html">
+            
+            <span><b>2.2.8.</b> Usability</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="section2/stock_photos.html">
+            
+                
+                    <a href="../section2/stock_photos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Stock Photos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="section2/forms.html">
+            
+                
+                    <a href="../section2/forms.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Forms
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="section2/page_layouts.html">
+            
+                
+                    <a href="../section2/page_layouts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Page Layouts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="section2/3d_transitions.html">
+            
+                
+                    <a href="../section2/3d_transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        3D Transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="section2/hover.html">
+            
+                
+                    <a href="../section2/hover.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Hover
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="section2/menu.html">
+            
+                
+                    <a href="../section2/menu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Menu
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="section2/app_landing.html">
+            
+                
+                    <a href="../section2/app_landing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        App Landing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="section2/gestures.html">
+            
+                
+                    <a href="../section2/gestures.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Gestures
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="section2/patterns.html">
+            
+                
+                    <a href="../section2/patterns.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        Patterns
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="section1/index.html">
+            
+                
+                    <a href="../section1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Development
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="section1/example1.html">
+            
+                
+                    <a href="../section1/example1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        example 1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="section1/example2.html">
+            
+                
+                    <a href="../section1/example2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        example 2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="section1/charts.html">
+            
+                
+                    <a href="../section1/charts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Charts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="section1/twilio.html">
+            
+                
+                    <a href="../section1/twilio.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Twilio
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="section1/writing.html">
+            
+                
+                    <a href="../section1/writing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Writing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="section1/javascript.html">
+            
+                
+                    <a href="../section1/javascript.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="section1/utilities.html">
+            
+                
+                    <a href="../section1/utilities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.1.</b>
+                        
+                        Utilities
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="section1/reactjs.html">
+            
+                
+                    <a href="../section1/reactjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.2.</b>
+                        
+                        ReactJS
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="section1/learning.html">
+            
+                
+                    <a href="../section1/learning.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Learning Platforms
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="section1/obj-c.html">
+            
+                
+                    <a href="../section1/obj-c.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        Obj-c
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="section1/protocol_buffers.html">
+            
+                
+                    <a href="../section1/protocol_buffers.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.1.</b>
+                        
+                        Protocol Buffers
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.9" data-path="section1/optimization.html">
+            
+                
+                    <a href="../section1/optimization.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Optimization
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="section1/prototyping.html">
+            
+            <span><b>3.10.</b> Prototyping</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="section1/framerjs.html">
+            
+                
+                    <a href="../section1/framerjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        FramerJS
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="operations/index.html">
+            
+                
+                    <a href="../operations/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Operations
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="growth_hacking.html">
+            
+                
+                    <a href="../growth_hacking.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Growth Hacking
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="operations/metrics.html">
+            
+                
+                    <a href="../operations/metrics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Metrics
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >TZM - Dev Journal</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="optimization"><a name="optimization" class="plugin-anchor" href="#optimization"><span class="fa fa-link"></span></a>Optimization</h1>
+<p>Page Speed Insights - <a href="https://github.com/addyosmani/psi" target="_blank">https://github.com/addyosmani/psi</a></p>
+<p>Boom - <a href="https://github.com/tarekziade/boom" target="_blank">https://github.com/tarekziade/boom</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../section1/protocol_buffers.html" class="navigation navigation-prev " aria-label="Previous page: Protocol Buffers"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../section1/framerjs.html" class="navigation navigation-next " aria-label="Next page: FramerJS"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-js-sequence-diagram/jquery-2.1.1.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-js-sequence-diagram/underscore-min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-js-sequence-diagram/sequence-diagram-min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-js-sequence-diagram/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"customtheme":{"css":["../_/css/app.css"],"js":["../_/js/app.js"]},"anchors":{},"mermaid":{},"js-sequence-diagram":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
